@@ -1,0 +1,908 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Med Anwr | Software Engineer & Developer Portfolio</title>
+    <meta name="description" content="Personal portfolio of Med Anwr: 2eme Genie Logiciel at EPI, projects, skills, and contact." />
+    <meta property="og:title" content="Med Anwr | Software Engineer & Developer Portfolio" />
+    <meta property="og:description" content="Personal portfolio of Med Anwr: 2eme Genie Logiciel at EPI, projects, skills, and contact." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+  </head>
+  <body>
+    <!-- Outer Screen Frame Container (inspired by reference design) -->
+    <div class="outer-screen-frame">
+      <!-- Background Interactive Neon Cyan Vortex Canvas -->
+      <canvas id="vortexCanvas"></canvas>
+
+      <!-- Desktop Left Navigation Rail -->
+      <aside class="desktop-side-rail" aria-label="Quick Rail Navigation">
+        <div class="vertical-nav-links">
+          <button type="button" class="vertical-link nav-panel-trigger" data-target-page="contact">Contact</button>
+          <button type="button" class="vertical-link nav-panel-trigger" data-target-page="certificates">Certificates</button>
+          <button type="button" class="vertical-link nav-panel-trigger" data-target-page="skills">Skills</button>
+          <button type="button" class="vertical-link nav-panel-trigger" data-target-page="projects">Work</button>
+          <button type="button" class="vertical-link nav-panel-trigger" data-target-page="about">About</button>
+        </div>
+        
+        <div class="side-rail-line"></div>
+
+        <div class="side-social-links">
+          <a href="https://github.com/fuklogaming-afk" target="_blank" rel="noopener noreferrer" class="side-social-btn" title="GitHub">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+            </svg>
+          </a>
+          <a href="mailto:Fuklogaming@gmail.com" class="side-social-btn" title="Email">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </a>
+        </div>
+      </aside>
+
+      <!-- Desktop Right Dock Widget -->
+      <aside class="desktop-right-dock" aria-label="Quick Controls">
+        <button type="button" class="dock-icon-btn nav-panel-trigger" data-target-page="about" title="About">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+        </button>
+        <button type="button" class="dock-icon-btn nav-panel-trigger" data-target-page="projects" title="Projects">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+            <line x1="8" y1="21" x2="16" y2="21"></line>
+            <line x1="12" y1="17" x2="12" y2="21"></line>
+          </svg>
+        </button>
+        <button type="button" class="dock-icon-btn nav-panel-trigger" data-target-page="skills" title="Skills">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="16 18 22 12 16 6"></polyline>
+            <polyline points="8 6 2 12 8 18"></polyline>
+          </svg>
+        </button>
+        <button type="button" class="dock-icon-btn nav-panel-trigger" data-target-page="certificates" title="Certificates">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="8" r="6"></circle>
+            <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path>
+          </svg>
+        </button>
+        <button type="button" class="dock-icon-btn nav-panel-trigger" data-target-page="contact" title="Contact">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+        </button>
+      </aside>
+
+      <!-- Main Layer Inside Outer Screen Frame -->
+      <div class="frame-content-layer">
+        <!-- Site Header Navigation -->
+        <header class="site-header">
+          <div class="container nav-container">
+            <a href="#hero" class="logo-box">
+              <span class="logo-symbol">J°</span>
+              <span class="logo-text">MED ANWR</span>
+            </a>
+
+            <button 
+              id="mobileMenuBtn" 
+              class="mobile-menu-btn" 
+              aria-label="Toggle navigation menu" 
+              aria-expanded="false"
+            >
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+              </svg>
+            </button>
+
+            <ul id="navLinks" class="nav-center-menu">
+              <li><a href="#hero" class="nav-link active">Home</a></li>
+              <li>
+                <button type="button" class="nav-link nav-panel-trigger" data-target-page="about">
+                  <span>About</span>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="nav-link nav-panel-trigger" data-target-page="projects">
+                  <span>Projects</span>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="nav-link nav-panel-trigger" data-target-page="skills">
+                  <span>Skills</span>
+                  <span class="nav-badge-pill" id="skillNavCount">6</span>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="nav-link nav-panel-trigger" data-target-page="certificates">
+                  <span>Certificates</span>
+                  <span class="nav-badge-pill" id="certNavCount">0</span>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="nav-link nav-panel-trigger" data-target-page="contact">
+                  <span>Contact</span>
+                </button>
+              </li>
+            </ul>
+
+            <button type="button" class="nav-contact-pill nav-panel-trigger" data-target-page="contact">
+              <span>Contact</span>
+            </button>
+          </div>
+        </header>
+
+        <main>
+          <!-- 1. Hero Section -->
+          <section id="hero" class="hero">
+            <div class="container">
+              <div class="hero-layout">
+                <div class="hero-main-group">
+                  <div class="hero-intro-tag">
+                    <span class="hero-intro-dot"></span>
+                    <span>I'M MED ANWR</span>
+                  </div>
+
+                  <!-- Staggered Signature Headline -->
+                  <div class="hero-staggered-title">
+                    <span class="title-line-1">Developer</span>
+                    <span class="title-line-2">Designer</span>
+                    <span class="title-line-3">Creator</span>
+                  </div>
+
+                  <div class="hero-role-badge">
+                    <span class="hero-role-highlight">2eme Genie Logiciel</span> at EPI
+                  </div>
+
+                  <p class="hero-tagline-glass">
+                    Build my own site busnisse
+                  </p>
+
+                  <div class="hero-action-buttons">
+                    <button type="button" class="btn-cyber-primary nav-panel-trigger" data-target-page="projects">
+                      <span>View Projects</span>
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                      </svg>
+                    </button>
+
+                    <button type="button" class="btn-cyber-outline nav-panel-trigger" data-target-page="skills">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="16 18 22 12 16 6"></polyline>
+                        <polyline points="8 6 2 12 8 18"></polyline>
+                      </svg>
+                      <span>Skills</span>
+                    </button>
+
+                    <button type="button" class="btn-cyber-outline nav-panel-trigger" data-target-page="certificates">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="8" r="6"></circle>
+                        <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path>
+                      </svg>
+                      <span>Certificates</span>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Right Cyber Card with Real Photo (Clean & Zero Effects) -->
+                <div class="hero-card-glass">
+                  <div class="profile-photo-container">
+                    <img 
+                      src="/assets/aistudio/image_5266f8e3.png" 
+                      alt="Med Anwr - Software Engineering Student at EPI" 
+                      class="profile-photo-img" 
+                      loading="eager"
+                    />
+                    <div class="profile-photo-badge">
+                      <span class="profile-badge-dot"></span>
+                      <span>EPI STUDENT</span>
+                    </div>
+                  </div>
+                  <h2 class="card-name-title">Med Anwr</h2>
+                  <div class="card-spec-sub">2eme Genie Logiciel at EPI</div>
+
+                  <div class="card-data-rows">
+                    <div class="card-data-row">
+                      <span class="data-label">Institution</span>
+                      <span class="data-val cyan">EPI</span>
+                    </div>
+                    <div class="card-data-row">
+                      <span class="data-label">Specialization</span>
+                      <span class="data-val">2eme Genie Logiciel</span>
+                    </div>
+                    <div class="card-data-row">
+                      <span class="data-label">Primary Vision</span>
+                      <span class="data-val cyan">Build site busnisse</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 2. About Section -->
+          <section id="about">
+            <div class="container">
+              <div class="section-head">
+                <div>
+                  <span class="section-pill-badge">Academic Profile</span>
+                  <h2 class="section-main-title">About Me</h2>
+                </div>
+                <button type="button" class="open-in-panel-btn nav-panel-trigger" data-target-page="about">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="9" y1="3" x2="9" y2="21"></line>
+                  </svg>
+                  <span>View in Screen Panel</span>
+                </button>
+              </div>
+
+              <div class="about-card-grid">
+                <div class="dark-pro-card">
+                  <div class="card-top-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                      <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                    </svg>
+                  </div>
+                  <h3 class="pro-card-title">Studies & Specialization</h3>
+                  <p class="pro-card-body">
+                    Currently studying <span class="badge-tag">2eme Genie Logiciel</span> at <span class="badge-tag">EPI</span>.
+                  </p>
+                </div>
+
+                <div class="dark-pro-card">
+                  <div class="card-top-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+                    </svg>
+                  </div>
+                  <h3 class="pro-card-title">Commercial Vision</h3>
+                  <p class="pro-card-body">
+                    In one sentence: <span class="badge-tag">Build my own site busnisse</span>.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 3. Projects Section with (+) Add Project -->
+          <section id="projects">
+            <div class="container">
+              <div class="section-head">
+                <div>
+                  <span class="section-pill-badge">Portfolio</span>
+                  <h2 class="section-main-title">Projects</h2>
+                </div>
+                <div class="certs-controls-row">
+                  <button type="button" class="btn-add-cert" id="triggerAddProjectBtnMain">
+                    <span class="btn-add-cert-icon">+</span>
+                    <span>Add Project</span>
+                  </button>
+                  <button type="button" class="open-in-panel-btn nav-panel-trigger" data-target-page="projects">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                      <line x1="9" y1="3" x2="9" y2="21"></line>
+                    </svg>
+                    <span>View in Screen Panel</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="projects-stack" id="projectsContainerMain">
+                <!-- Rendered dynamically by TypeScript (seeded with bistronova siteweb) -->
+              </div>
+            </div>
+          </section>
+
+          <!-- 4. Skills Section with Custom Tags & (+) Add Skill Button -->
+          <section id="skills">
+            <div class="container">
+              <div class="section-head">
+                <div>
+                  <span class="section-pill-badge">Technical Stack</span>
+                  <h2 class="section-main-title">Skills</h2>
+                </div>
+                <div class="certs-controls-row">
+                  <button type="button" class="btn-add-cert" id="triggerAddSkillBtnMain">
+                    <span class="btn-add-cert-icon">+</span>
+                    <span>Add Skill</span>
+                  </button>
+                  <button type="button" class="open-in-panel-btn nav-panel-trigger" data-target-page="skills">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                      <line x1="9" y1="3" x2="9" y2="21"></line>
+                    </svg>
+                    <span>View in Screen Panel</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Real-time Skill Search Toolbar Above Skills Section -->
+              <div class="skills-filter-toolbar">
+                <div class="skills-search-wrapper">
+                  <span class="skills-search-icon" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="11" cy="11" r="8"></circle>
+                      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                  </span>
+                  <input
+                    type="text"
+                    id="skillSearchInput"
+                    class="skills-search-input"
+                    placeholder="Search skills by name, tag, or technology (e.g. JS, C, OOP, #Web)..."
+                    aria-label="Search skills in real-time"
+                    autocomplete="off"
+                    spellcheck="false"
+                  />
+                  <button
+                    type="button"
+                    id="skillSearchClearBtn"
+                    class="skills-search-clear-btn"
+                    aria-label="Clear search query"
+                    style="display: none;"
+                  >
+                    ✕
+                  </button>
+                </div>
+                <div class="skills-search-meta">
+                  <span id="skillSearchCountBadge" class="skills-count-pill">Showing 6 of 6 skills</span>
+                </div>
+              </div>
+
+              <!-- Skills Matrix with Individual Tags & Custom Design -->
+              <div class="skills-matrix-grid" id="skillsMatrixMain">
+                <!-- Rendered dynamically by TypeScript with individual tags -->
+              </div>
+            </div>
+          </section>
+
+          <!-- 5. Certificates Section (No fake certification, (+) Add PDF) -->
+          <section id="certificates">
+            <div class="container">
+              <div class="section-head">
+                <div>
+                  <span class="section-pill-badge">Official Credentials</span>
+                  <h2 class="section-main-title">Certifications</h2>
+                </div>
+                <div class="certs-controls-row">
+                  <button type="button" class="btn-add-cert" id="triggerAddCertBtnMain">
+                    <span class="btn-add-cert-icon">+</span>
+                    <span>Add Certificate (PDF)</span>
+                  </button>
+                  <button type="button" class="open-in-panel-btn nav-panel-trigger" data-target-page="certificates">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                      <line x1="9" y1="3" x2="9" y2="21"></line>
+                    </svg>
+                    <span>View in Screen Panel</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Certificates Grid (Small cards that get bigger on click) -->
+              <div class="certs-grid" id="certsGridMain">
+                <!-- Rendered dynamically by TypeScript (Zero fake certificates by default) -->
+              </div>
+            </div>
+          </section>
+
+          <!-- 6. Contact Section -->
+          <section id="contact">
+            <div class="container">
+              <div class="section-head">
+                <div>
+                  <span class="section-pill-badge">Direct Communication</span>
+                  <h2 class="section-main-title">Contact</h2>
+                </div>
+                <button type="button" class="open-in-panel-btn nav-panel-trigger" data-target-page="contact">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="9" y1="3" x2="9" y2="21"></line>
+                  </svg>
+                  <span>View in Screen Panel</span>
+                </button>
+              </div>
+
+              <div class="contact-card-grid">
+                <!-- Email Channel -->
+                <div class="contact-channel-card">
+                  <div class="contact-channel-header">
+                    <div class="contact-icon-square">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                      </svg>
+                    </div>
+                    <div>
+                      <div class="channel-label-tag">Direct Email</div>
+                      <div class="channel-value-text">Fuklogaming@gmail.com</div>
+                    </div>
+                  </div>
+
+                  <div class="channel-actions">
+                    <a href="mailto:Fuklogaming@gmail.com" class="channel-btn channel-btn-primary">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                      </svg>
+                      <span>Send Email</span>
+                    </a>
+                    <button type="button" id="copyEmailBtn" class="channel-btn channel-btn-secondary">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                      </svg>
+                      <span>Copy Address</span>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- GitHub Channel -->
+                <div class="contact-channel-card">
+                  <div class="contact-channel-header">
+                    <div class="contact-icon-square">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                      </svg>
+                    </div>
+                    <div>
+                      <div class="channel-label-tag">Source Code Repository</div>
+                      <div class="channel-value-text">github.com/fuklogaming-afk</div>
+                    </div>
+                  </div>
+
+                  <div class="channel-actions">
+                    <a 
+                      href="https://github.com/fuklogaming-afk" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      class="channel-btn channel-btn-primary"
+                    >
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                      </svg>
+                      <span>Open GitHub Profile</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="site-footer">
+          <div class="container footer-inner">
+            <p>© 2026 Med Anwr • 2eme Genie Logiciel at EPI</p>
+            <a href="#hero" id="backToTopBtn" class="back-to-top-link">
+              <span>Back to top</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="18 15 12 9 6 15"></polyline>
+              </svg>
+            </a>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <!-- ==========================================================================
+         DEDICATED SCREEN PANEL (WORKSPACE SPLIT-VIEWER)
+         ========================================================================== -->
+    <div id="screenPanelBackdrop" class="screen-panel-backdrop"></div>
+    
+    <aside id="dedicatedScreenPanel" class="dedicated-screen-panel" aria-label="Dedicated page viewer">
+      <!-- Panel Header -->
+      <div class="panel-header">
+        <div class="panel-header-left">
+          <span class="panel-indicator-badge">
+            <span class="panel-indicator-dot"></span>
+            <span>Screen View</span>
+          </span>
+          <h2 id="panelCurrentTitle" class="panel-title">About</h2>
+        </div>
+        
+        <button id="closePanelBtn" class="panel-close-btn" aria-label="Close screen view">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Quick Switch Tabs inside panel -->
+      <nav class="panel-nav-tabs" aria-label="Screen View Navigation">
+        <button type="button" class="panel-tab-btn" data-panel-tab="about">About</button>
+        <button type="button" class="panel-tab-btn" data-panel-tab="projects">Projects</button>
+        <button type="button" class="panel-tab-btn" data-panel-tab="skills">Skills</button>
+        <button type="button" class="panel-tab-btn" data-panel-tab="certificates">Certificates</button>
+        <button type="button" class="panel-tab-btn" data-panel-tab="contact">Contact</button>
+      </nav>
+
+      <!-- Panel Content Views -->
+      <div class="panel-body">
+        <!-- 1. ABOUT VIEW -->
+        <div id="panelView-about" class="panel-page-view">
+          <div class="panel-view-hero" style="display: flex; align-items: center; gap: 16px;">
+            <div class="profile-photo-container" style="width: 70px; height: 90px; margin: 0; flex-shrink: 0;">
+              <img 
+                src="/assets/aistudio/image_5266f8e3.png" 
+                alt="Med Anwr" 
+                class="profile-photo-img" 
+              />
+            </div>
+            <div>
+              <h3 class="panel-view-title">Med Anwr</h3>
+              <p class="panel-view-subtitle">2eme Genie Logiciel at EPI</p>
+            </div>
+          </div>
+
+          <div class="dark-pro-card" style="padding: 24px;">
+            <div class="card-top-icon" style="width: 44px; height: 44px; margin-bottom: 14px;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+              </svg>
+            </div>
+            <h4 class="pro-card-title" style="font-size: 1.15rem;">Academic Studies</h4>
+            <p class="pro-card-body" style="font-size: 0.95rem;">
+              Enrolled in <span class="badge-tag">2eme Genie Logiciel</span> at <span class="badge-tag">EPI</span>.
+            </p>
+          </div>
+
+          <div class="dark-pro-card" style="padding: 24px;">
+            <div class="card-top-icon" style="width: 44px; height: 44px; margin-bottom: 14px;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+              </svg>
+            </div>
+            <h4 class="pro-card-title" style="font-size: 1.15rem;">Vision</h4>
+            <p class="pro-card-body" style="font-size: 0.95rem;">
+              In one sentence: <span class="badge-tag">Build my own site busnisse</span>.
+            </p>
+          </div>
+        </div>
+
+        <!-- 2. PROJECTS VIEW WITH (+) ADD PROJECT -->
+        <div id="panelView-projects" class="panel-page-view">
+          <div class="panel-view-hero" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+            <div>
+              <h3 class="panel-view-title">Projects</h3>
+              <p class="panel-view-subtitle">Web Engineering Works</p>
+            </div>
+            <button type="button" class="btn-add-cert" id="triggerAddProjectBtnPanel">
+              <span class="btn-add-cert-icon">+</span>
+              <span>Add Project</span>
+            </button>
+          </div>
+
+          <div class="projects-stack" id="projectsContainerPanel">
+            <!-- Rendered dynamically by TypeScript -->
+          </div>
+        </div>
+
+        <!-- 3. SKILLS VIEW IN PANEL -->
+        <div id="panelView-skills" class="panel-page-view">
+          <div class="panel-view-hero" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+            <div>
+              <h3 class="panel-view-title">Skills</h3>
+              <p class="panel-view-subtitle">With individual specialized domain tags</p>
+            </div>
+            <button type="button" class="btn-add-cert" id="triggerAddSkillBtnPanel">
+              <span class="btn-add-cert-icon">+</span>
+              <span>Add Skill</span>
+            </button>
+          </div>
+
+          <div class="skills-matrix-grid" id="skillsMatrixPanel" style="grid-template-columns: 1fr; gap: 16px;">
+            <!-- Rendered dynamically by TypeScript -->
+          </div>
+        </div>
+
+        <!-- 4. CERTIFICATES VIEW IN PANEL (No fake certification, (+) Add PDF) -->
+        <div id="panelView-certificates" class="panel-page-view">
+          <div class="panel-view-hero" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+            <div>
+              <h3 class="panel-view-title">Certificates</h3>
+              <p class="panel-view-subtitle">Verified credentials and qualifications</p>
+            </div>
+            <button type="button" class="btn-add-cert" id="triggerAddCertBtnPanel">
+              <span class="btn-add-cert-icon">+</span>
+              <span>Add Certificate (PDF)</span>
+            </button>
+          </div>
+
+          <div class="certs-grid" id="certsGridPanel" style="grid-template-columns: 1fr; gap: 16px;">
+            <!-- Rendered dynamically by TypeScript -->
+          </div>
+        </div>
+
+        <!-- 5. CONTACT VIEW -->
+        <div id="panelView-contact" class="panel-page-view">
+          <div class="panel-view-hero">
+            <h3 class="panel-view-title">Contact Med Anwr</h3>
+            <p class="panel-view-subtitle">Direct channels for communication</p>
+          </div>
+
+          <div class="dark-pro-card" style="padding: 24px;">
+            <div class="channel-label-tag">Direct Email</div>
+            <div class="channel-value-text" style="font-size: 1.1rem; margin-bottom: 14px;">Fuklogaming@gmail.com</div>
+            <div class="channel-actions">
+              <a href="mailto:Fuklogaming@gmail.com" class="channel-btn channel-btn-primary">
+                <span>Send Email</span>
+              </a>
+              <button type="button" id="copyEmailPanelBtn" class="channel-btn channel-btn-secondary">
+                <span>Copy Address</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="dark-pro-card" style="padding: 24px;">
+            <div class="channel-label-tag">GitHub Profile</div>
+            <div class="channel-value-text" style="font-size: 1.1rem; margin-bottom: 14px;">fuklogaming-afk</div>
+            <div class="channel-actions">
+              <a href="https://github.com/fuklogaming-afk" target="_blank" rel="noopener noreferrer" class="channel-btn channel-btn-primary">
+                <span>Open GitHub Profile</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ==========================================================================
+         ADD PROJECT MODAL (+)
+         ========================================================================== -->
+    <div id="addProjectModal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="addProjectModalTitle">
+      <div class="cert-modal-dialog" style="max-width: 520px;">
+        <div class="cert-modal-header">
+          <div class="cert-modal-header-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+            <span id="addProjectModalTitle">Add Project</span>
+          </div>
+          <button type="button" id="closeAddProjectModalBtn" class="cert-modal-close-btn" aria-label="Close modal">
+            ✕
+          </button>
+        </div>
+
+        <form id="addProjectForm" class="add-cert-form">
+          <div class="form-field-group">
+            <label class="form-label" for="projectNameInput">Project Name *</label>
+            <input type="text" id="projectNameInput" class="form-input" placeholder="e.g. Portfolio v2, E-Commerce App, API Gateway..." required />
+          </div>
+
+          <div class="form-field-group">
+            <label class="form-label" for="projectCategoryInput">Category / Tagline *</label>
+            <input type="text" id="projectCategoryInput" class="form-input" placeholder="e.g. Web Application, Full-Stack Project..." required />
+          </div>
+
+          <div class="form-field-group">
+            <label class="form-label" for="projectDescInput">Description *</label>
+            <textarea id="projectDescInput" class="form-input" rows="3" placeholder="Short description of the project features, architecture, and purpose..." required></textarea>
+          </div>
+
+          <div class="form-field-group">
+            <label class="form-label" for="projectUrlInput">Project URL / GitHub Link (optional)</label>
+            <input type="text" id="projectUrlInput" class="form-input" placeholder="https://..." />
+          </div>
+
+          <div class="form-field-group">
+            <label class="form-label" for="projectTagsInput">Technologies (comma-separated)</label>
+            <input type="text" id="projectTagsInput" class="form-input" placeholder="e.g. html, css, js, react, java" />
+          </div>
+
+          <div style="display: flex; justify-content: flex-end; gap: 10px; margin-top: 10px;">
+            <button type="button" id="cancelAddProjectBtn" class="channel-btn channel-btn-secondary">Cancel</button>
+            <button type="submit" class="channel-btn channel-btn-primary">
+              <span>Save & Add Project</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- ==========================================================================
+         ADD CERTIFICATE MODAL (+) - UPLOAD PDF CERTIFICATE
+         ========================================================================== -->
+    <div id="addCertModal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="addCertModalTitle">
+      <div class="cert-modal-dialog" style="max-width: 520px;">
+        <div class="cert-modal-header">
+          <div class="cert-modal-header-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="8" r="6"></circle>
+              <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path>
+            </svg>
+            <span id="addCertModalTitle">Add Certificate (PDF)</span>
+          </div>
+          <button type="button" id="closeAddCertModalBtn" class="cert-modal-close-btn" aria-label="Close modal">
+            ✕
+          </button>
+        </div>
+
+        <form id="addCertForm" class="add-cert-form">
+          <div class="form-field-group">
+            <label class="form-label" for="certTitleInput">Certificate Title *</label>
+            <input type="text" id="certTitleInput" class="form-input" placeholder="e.g. Oracle Certified Associate Java Programmer" required />
+          </div>
+
+          <div class="form-field-group">
+            <label class="form-label" for="certIssuerInput">Issuing Organization / Institution *</label>
+            <input type="text" id="certIssuerInput" class="form-input" placeholder="e.g. EPI, Oracle, Coursera, Meta, Google..." required />
+          </div>
+
+          <div class="form-field-group">
+            <label class="form-label" for="certDateInput">Issue Date *</label>
+            <input type="text" id="certDateInput" class="form-input" placeholder="e.g. Oct 2026 or 2026" required />
+          </div>
+
+          <div class="form-field-group">
+            <label class="form-label" for="certPdfFileInput">Certificate PDF File *</label>
+            <label for="certPdfFileInput" class="file-upload-dropzone" id="certDropzone">
+              <div class="file-upload-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="17 8 12 3 7 8"></polyline>
+                  <line x1="12" y1="3" x2="12" y2="15"></line>
+                </svg>
+              </div>
+              <div class="dropzone-label">Click to browse or drop certificate PDF</div>
+              <div class="dropzone-sub">PDF document format • Stored in browser memory</div>
+              <input type="file" id="certPdfFileInput" accept="application/pdf" style="display: none;" required />
+            </label>
+            <div id="fileChosenPreview" class="file-chosen-preview">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+              </svg>
+              <span id="chosenFileNameText">certificate.pdf</span>
+            </div>
+          </div>
+
+          <div style="display: flex; justify-content: flex-end; gap: 10px; margin-top: 10px;">
+            <button type="button" id="cancelAddCertBtn" class="channel-btn channel-btn-secondary">Cancel</button>
+            <button type="submit" class="channel-btn channel-btn-primary">
+              <span>Save & Upload Certificate</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- ==========================================================================
+         EXPANDED CERTIFICATE MODAL ("GET BIGGER ONCLICK")
+         ========================================================================== -->
+    <div id="expandedCertModal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="expandedCertModalTitle">
+      <div class="cert-modal-dialog" style="max-width: 660px;">
+        <div class="cert-modal-header">
+          <div class="cert-modal-header-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="8" r="6"></circle>
+              <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path>
+            </svg>
+            <span id="expandedCertModalTitle">Certificate Details</span>
+          </div>
+          <button type="button" id="closeExpandedCertModalBtn" class="cert-modal-close-btn" aria-label="Close modal">
+            ✕
+          </button>
+        </div>
+
+        <div class="cert-parchment-sheet">
+          <div class="cert-gold-ribbon-seal">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="8" r="6"></circle>
+              <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path>
+            </svg>
+          </div>
+          <div class="cert-formal-subhead">OFFICIAL CERTIFICATE OF COMPLETION</div>
+          <h3 id="expandedCertHeading" class="cert-formal-main-title">Certificate Title</h3>
+          <p class="cert-present-text">This official qualification is proudly awarded to</p>
+          <div class="cert-recipient-name">Med Anwr</div>
+          <p id="expandedCertReason" class="cert-reason-text">
+            Recognizing dedicated technical proficiency, software development capability, and engineering excellence at EPI.
+          </p>
+          
+          <div class="cert-formal-meta-grid">
+            <div>
+              <div class="meta-field-label">Issuing Authority</div>
+              <div id="expandedCertIssuer" class="meta-field-val">EPI</div>
+            </div>
+            <div>
+              <div class="meta-field-label">Date Conferred</div>
+              <div id="expandedCertDate" class="meta-field-val">2026</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cert-modal-actions">
+          <a id="expandedCertDownloadBtn" href="#" download="certificate.pdf" target="_blank" class="channel-btn channel-btn-primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            <span>View / Download PDF</span>
+          </a>
+          <button type="button" id="closeExpandedCertActionBtn" class="channel-btn channel-btn-secondary">Close View</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==========================================================================
+         ADD SKILL MODAL (+)
+         ========================================================================== -->
+    <div id="addSkillModal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="addSkillModalTitle">
+      <div class="cert-modal-dialog" style="max-width: 520px;">
+        <div class="cert-modal-header">
+          <div class="cert-modal-header-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+            <span id="addSkillModalTitle">Add Future Skill</span>
+          </div>
+          <button type="button" id="closeAddSkillModalBtn" class="cert-modal-close-btn" aria-label="Close modal">
+            ✕
+          </button>
+        </div>
+
+        <form id="addSkillForm" class="add-cert-form">
+          <div class="form-field-group">
+            <label class="form-label" for="skillNameInput">Skill Name *</label>
+            <input type="text" id="skillNameInput" class="form-input" placeholder="e.g. Python, React, TypeScript, Docker, SQL..." required />
+          </div>
+
+          <div class="form-field-group">
+            <label class="form-label" for="skillCategoryInput">Domain / Category *</label>
+            <input type="text" id="skillCategoryInput" class="form-input" placeholder="e.g. Frontend Framework, Systems Logic, Database..." required />
+          </div>
+
+          <div class="form-field-group">
+            <label class="form-label" for="skillRoleBadgeInput">Role Badge (Short tag) *</label>
+            <input type="text" id="skillRoleBadgeInput" class="form-input" placeholder="e.g. Client UI, Backend Engine, Data Core..." required />
+          </div>
+
+          <div class="form-field-group">
+            <label class="form-label" for="skillTagsInput">Individual Tags (comma-separated) *</label>
+            <input type="text" id="skillTagsInput" class="form-input" placeholder="e.g. #Hooks, #Components, #StateManagement, #Vite" required />
+          </div>
+
+          <div class="form-field-group">
+            <label class="form-label" for="skillLevelInput">Proficiency Level (50 - 100%) *</label>
+            <input type="range" id="skillLevelInput" min="50" max="100" value="85" style="accent-color: var(--neon-cyan); width: 100%; cursor: pointer;" />
+            <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--neon-cyan); font-weight: 700; margin-top: 4px;">
+              <span>Proficiency</span>
+              <span id="skillLevelValueText">85%</span>
+            </div>
+          </div>
+
+          <div style="display: flex; justify-content: flex-end; gap: 10px; margin-top: 10px;">
+            <button type="button" id="cancelAddSkillBtn" class="channel-btn channel-btn-secondary">Cancel</button>
+            <button type="submit" class="channel-btn channel-btn-primary">
+              <span>Save & Add Skill</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toastNotification" class="toast" role="status" aria-live="polite"></div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
